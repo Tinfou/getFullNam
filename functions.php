@@ -6,7 +6,7 @@
         {   
             if(validationChar($nom) && validationChar($prenom)){
                 $nom = mb_strtoupper($nom);
-                $prenom = ucfirst($prenom);
+                $prenom = ucwords($prenom);
                 return "votre nom complet est: $nom $prenom"; 
             }
             else if(!$prenom && validationChar(($nom))){
